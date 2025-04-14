@@ -14,7 +14,7 @@
         <td>{{ driver.username }}</td>
         <td>{{ driver.first_name }}</td>
         <td>{{ driver.last_name }}</td>
-        <td><a href="{% url 'taxi:driver_detail' driver.pk %}">View Detail</a></td>
+        <td><a href="{% url 'taxi:driver-detail' driver.pk %}">View Detail</a></td>
       </tr>
     {% endfor %}
   </table>

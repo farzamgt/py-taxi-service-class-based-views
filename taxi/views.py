@@ -32,7 +32,6 @@ class CarListView(ListView):
 class CarDetailView(DetailView):
     model = Car
     template_name = "taxi/car_detail.html"
-    context_object_name = "car"
 
 
 class DriverListView(ListView):
@@ -42,4 +41,4 @@ class DriverListView(ListView):
 
 class DriverDetailView(DetailView):
     model = Driver
-    queryset = Driver.objects.prefetch_related("cars__manufacturer").all()
+    template_name = "taxi/driver_detail.html"
